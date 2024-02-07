@@ -216,7 +216,7 @@ var_dump($formateurs);
 ksort($formateurs);
 
 foreach($formateurs as $prenom => $ville) {
-    echo ucfirst($prenom)." habite ".mb_strtoupper($ville)."<br>";
+    echo ucfirst($prenom)." habite ".mb_strtoupper($ville)."<br>"; // ucfirst= première lettre maj, mb_strtoupper= toutes maj
 }
 
 
@@ -237,7 +237,8 @@ $clients = [
 ];
 
 var_dump($clients);
-// echo $clients["virgile"]["cp"]." ".$clients["virgile"]["ville"];
+
+// echo $clients["virgile"]["cp"]." ".$clients["virgile"]["ville"];   // nous affichera le cp et la ville du client
 
 foreach($clients as $prenom => $coordonnees) {
     echo ucfirst($prenom)." habite ".
@@ -247,7 +248,7 @@ foreach($clients as $prenom => $coordonnees) {
 
 // FONCTIONS
 
-echo afficherMessage(); 
+echo afficherMessage();  //peu importe ou nous appelons la fonction, celle-ci apparaitra une fois celle ci déclarée
 
 function afficherMessage() : string {
     $message = "Voici mon message<br>";
@@ -280,7 +281,7 @@ foreach($eleves as $prenom => $notes) {
     echo "La moyenne de $prenom est : ".calculerMoyenne($notes)."<br>";
 }
 
-function calculerMoyenne(array $notes) : float {
+function calculerMoyenne(array $notes) : float { //nous pouvons éxiger le type de variable voulu à savoir içi array
     $nbNotes = count($notes);
     $sommeNotes = array_sum($notes);
     $moyenne = round($sommeNotes / $nbNotes, 2);
@@ -293,7 +294,7 @@ echo pairOuImpair(5);
 
 function pairOuImpair($nombre) : string {
 
-    if($nombre % 2 == 0) {   // % = modulo
+    if($nombre % 2 == 0) {   // % = modulo 
         $resultat = "pair<br>";
     } else {
         $resultat = "impair<br>";

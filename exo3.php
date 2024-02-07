@@ -5,8 +5,12 @@
 
 <?php
 
-$chaineDeCaracteres = "Notre formation DL commence aujourd'hui"; 
-$chaineDeCaracteres2 = "Notre formation DL commence demain"; 
+$str = "Notre formation DL commence aujourd'hui";
+$w1 = "aujourd'hui";
+$w2 = "demain";
 
-    echo $chaineDeCaracteres. "<br>";
-    echo $chaineDeCaracteres2;
+echo $str ."<br>";
+
+$str = str_replace($w1, $w2, $str);
+
+echo $str;
