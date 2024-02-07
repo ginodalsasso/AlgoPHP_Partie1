@@ -8,4 +8,4 @@ Ecrire un algorithme permettant de compter le nombre de caractères contenus dan
 
 $phrase = "Notre formation DL commence aujourd'hui";
 $nbCaractere = strlen($phrase);
-echo "La phrase contient $nbCaractere caractères";
+echo "La phrase « Notre formation DL commence aujourd'hui » contient $nbCaractere caractères";

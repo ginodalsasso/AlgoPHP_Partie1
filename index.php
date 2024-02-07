@@ -21,7 +21,7 @@ $date = new DateTime();  // programmation orientée objet (POO)
 echo "Test<br>";
 echo $chaineDeCaracteres."<br>";   // mon texte
 echo $chaineDeCaracteres3." ".$entier." euros<br>";  // Mon prix est de 50 euros
-echo "$chaineDeCarac teres3 $entier euros<br>"; // Mon prix est de 50 euros
+echo "$chaineDeCaracteres3 $entier euros<br>"; // Mon prix est de 50 euros
 
 
 // FONCTIONS CHAINES DE CARACTERES
@@ -53,7 +53,7 @@ echo $tableau1[0]."<br>";
 $notes = [12, 14, 9, 8, 19, 17.25];
 $nbNotes = count($notes);
 $sommeNotes = array_sum($notes);
-$moyenne = round($sommeNotes / $nbNotes, 2);
+$moyenne = round($sommeNotes / $nbNotes, 2); //2 étant le nb de chiffre exigé après la virgule
 
 echo "La moyenne est $moyenne<br>";
 
@@ -71,9 +71,8 @@ $totalTTC = $nbArticles * $prixHT + $nbArticles * $prixHT * $tauxTVA;
 $totalTTC2 = $nbArticles * $prixHT * (1 + $tauxTVA);
 echo "Le total TTC est de $totalTTC €<br>";
 
-$texte = "Texte";
-$calcul = $texte - 5;
-echo $calcul."<br>";
+// $$calcul = $texte - 5;
+//echo $calcul. "<br>";
 
 // Renvoie le type de la variable spécifiée en paramètre
 echo gettype($tableau1);
@@ -95,7 +94,7 @@ if($age >= 18) {
 
 echo "$prenom est $resultat<br>";
 
-// Ternaire
+// Ternaire (condition sur une ligne)
 $result = $age >= 18 ? "majeur" : "mineur";
 echo "$prenom est $result<br>";
 echo "$prenom est ".($age >= 18 ? "majeur" : "mineur")."<br>";
@@ -107,7 +106,7 @@ echo "$prenom est ".($age >= 18 ? "majeur" : "mineur")."<br>";
     sinon JUNIOR
 */
 
-if(gettype($age) == "double" || gettype($age) == "integer" ) {
+if(gettype($age) == "double" || gettype($age) == "integer" ) { //gettype représente le type de donnée exigée (entier, booléen, string)
     if($age >= 30) {
         $resultat = "Senior";
     } elseif($age >= 20) {
@@ -151,7 +150,7 @@ if(gettype($age) == "double" || gettype($age) == "integer" ) {
 // Afficher les chiffres de 1 à 10
 
 // FOR (pour)
-// $i++  -->   $i = $i + 1
+// $i++  -->   $i = $i + 1  /// i pour itération
 
 for($i = 1; $i <= 10; $i++) {
     echo $i." ";
@@ -165,9 +164,9 @@ while($j <= 10) {
     $j++;
 }
 
-// FOREACH
+// FOREACH (pour chaque)
 
-$range = range(1,10);
+$range = range(1,10); //range permettant de faire un tableau rapidement
 var_dump($range);
 
 foreach(range(1,10) as $v) { 
