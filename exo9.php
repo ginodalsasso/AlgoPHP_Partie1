@@ -27,10 +27,8 @@ if (estImposable($age, $sexe)) {
     echo "Age : $age</br>";
     echo "Sexe : $sexe</br>";
     echo "La personne est imposable.";
-} else if{
+}else {
     echo "Age : $age</br>";
     echo "Sexe : $sexe</br>";
     echo "La personne n'est pas imposable.";
-} else{
-    echo "Veuillez saisir un âge numérique et un sexe 'M' ou 'F'!";
 }
