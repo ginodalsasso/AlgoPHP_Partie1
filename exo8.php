@@ -28,7 +28,6 @@ function tableMultiplication($nombre) {
 
 <p>Deuxième proposition:</p>
 
-
 <?php
 
 tableMultiplication(9);
@@ -45,5 +44,3 @@ function tableMultiplication($nombre) {
 }
 
 ?>
-
-

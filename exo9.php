@@ -13,16 +13,24 @@ La personne est imposable.</p>
 $age = 32;
 $sexe = "F";
 
-if(gettype($age) == "integer" || gettype($sexe) == "string" ) {
-    if($age > 35)  {
-        $resultat = "est non imposable";
-    } elseif($age > 20 and $sexe = false) {
-        $resultat = "est imposable";
+
+function estImposable($age, $sexe)
+{
+    if (($sexe === 'F' && $age >= 18 && $age <= 35) || ($sexe === 'M' && $age > 20)) { // && et || ---->  $a && $b || $c ---> (a and b) or c
+        return true;
     } else {
-        $resultat = "est imposable";
+        return false;
     }
-    
+}
+
+if (estImposable($age, $sexe)) {
     echo "Age : $age</br>";
     echo "Sexe : $sexe</br>";
-    echo "La personne qui a $age ans $resultat<br>";
+    echo "La personne est imposable.";
+} else if{
+    echo "Age : $age</br>";
+    echo "Sexe : $sexe</br>";
+    echo "La personne n'est pas imposable.";
+} else{
+    echo "Veuillez saisir un âge numérique et un sexe 'M' ou 'F'!";
 }
