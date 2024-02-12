@@ -44,3 +44,21 @@ function tableMultiplication($nombre) {
 }
 
 ?>
+
+<?php
+
+tableMultiplication(9);
+
+function tableMultiplication($nombre) {
+    echo "Table de $nombre :<br>";
+
+    $i = 1;
+    while ($i <= 10) {
+        $resultat = $i * $nombre;
+        echo "$i x $nombre = $resultat</br>";
+        $i++;
+    
+    }
+    }
+
+?>
