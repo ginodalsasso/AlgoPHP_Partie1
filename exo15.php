@@ -15,15 +15,15 @@ Alice DUCHEMIN a … ans </p>
 class Personne{
     private $_nom;
     private $_prenom;
-    private $_birthDate;   // DateTime supprimé ici
+    private DateTime $_birthDate;   // DateTime supprimé ici
 
 
     function __construct(string $nom, string $prenom, string $birthDate){
         $this->_nom = $nom;
         $this->prenom = $prenom;
-        $this->birthDate = $birthDate;    // new DateTime supprimé ici
+        $this->birthDate = new DateTime($birthDate);    // transforme notre "string" en "DateTime"
     }
-
+    
 
 public function getNom(){
     return $this->_nom;
@@ -48,11 +48,10 @@ public function setBirthDate(string $birthdate){
     $this->_birthdate = $birthDate;
 }
 
-public function getAge() {                              //fonction permettant de calculer l'âge des personnes
-    $birthDate = new DateTime($this->birthDate);
-    $todayDate = new DateTime();
-    $age = $todayDate->diff($birthDate);
-    return $age->y;
+public function getAge() {                              //fonction permettant de calculer l'âge des personnes à partir de la date du jour
+    $now = new DateTime(); // date du jour
+    $diff = $this->birthDate->diff($now);
+return $diff->y;                                         // ou return $diff->format("%Y") pour renvoyer que le nombre d'années
 }
 }
 
