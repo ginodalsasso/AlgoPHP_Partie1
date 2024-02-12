@@ -23,12 +23,11 @@ function estImposable($age, $sexe)
     }
 }
 
+echo "Age : $age</br>";
+echo "Sexe : $sexe</br>";
+
 if (estImposable($age, $sexe)) {
-    echo "Age : $age</br>";
-    echo "Sexe : $sexe</br>";
     echo "La personne est imposable.";
 }else {
-    echo "Age : $age</br>";
-    echo "Sexe : $sexe</br>";
     echo "La personne n'est pas imposable.";
 }
