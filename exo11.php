@@ -18,7 +18,8 @@ $nbMarques = count($marques);
 
 echo "Il y à $nbMarques marques de voitures dans le tableau:</br>";
 
-
+<ul>
 for ($i = 0; $i < count($marques); $i++) { 
     echo "<li>$marques[$i]</li>";
 }
+</ul>
