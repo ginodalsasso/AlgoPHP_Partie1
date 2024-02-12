@@ -22,7 +22,22 @@ $billet5 = 0;
 $coin2 = 0;
 $coin1 = 0;
 
-    /*while ($rest > 0) {             //tant que le reste à payer est > à 0 alors >>
+    $billet10 = intdiv($rest, 10);
+    $rest = $rest - 10 * $billet10;
+    $billet5 = intdiv($rest, 5);
+    $rest = $rest - 5 * $billet5;
+    $coin2 = intdiv($rest, 2);
+    $rest = $rest - 2 * $coin2;
+    
+    echo "Billets de 10 : $billet10 </br>";
+    echo "Billets de 5 : $billet5 </br>";
+    echo "Pièces de 2 : $coin2 </br>";
+    echo "Pièces de 1 : $rest </br>";
+
+
+    /* D'UNE AUTRE FACON;
+
+    while ($rest > 0) {             //tant que le reste à payer est > à 0 alors >>
         if ($rest >= 10){
             $billet10 ++;
             $rest -= 10;             // $a -= $b 	$a = $a - $b;   $a += $b 	$a = $a + $b; PAREIL POUR TOUT OPERATEUR ARITHMETIQUE
@@ -44,4 +59,6 @@ $coin1 = 0;
     echo "Reste à payer: $rest €</br>";
     echo "*********************************************************</br>";
     echo "Rendue de monnaie :</br>";
-    echo "$billet10 billets de 10€ - $billet5 billet de 5€ - $coin2 pièce de 2€ - $coin1 pièce de 1€";*/
+    echo "$billet10 billets de 10€ - $billet5 billet de 5€ - $coin2 pièce de 2€ - $coin1 pièce de 1€";
+*/
+    
